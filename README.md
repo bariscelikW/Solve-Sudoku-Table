@@ -16,17 +16,13 @@ This is a Python program that solves Sudoku puzzles using a logical approach. It
 
 ## Requirements
 
-- Python 3.x
+- Python 3
 
 ## Usage
 
 Run the script from the command line:
 ```
-python sudoku_solver.py <input_file> <output_file>
-```
-### Example
-```
-python sudoku_solver.py input.txt output.txt
+python sudoku.py <input_file> <output_file>
 ```
 ## Input File Format
 
@@ -36,15 +32,15 @@ python sudoku_solver.py input.txt output.txt
 
 ### Example input file (input.txt):
 ```
-5 3 0 0 7 0 0 0 0
-6 0 0 1 9 5 0 0 0
-0 9 8 0 0 0 0 6 0
-8 0 0 0 6 0 0 0 3
-4 0 0 8 0 3 0 0 1
-7 0 0 0 2 0 0 0 6
-0 6 0 0 0 0 2 8 0
-0 0 0 4 1 9 0 0 5
-0 0 0 0 8 0 0 7 9
+0 4 0 0 0 0 1 7 9
+0 0 2 0 0 8 0 5 4
+0 0 6 0 0 5 0 0 8
+0 8 0 0 7 0 9 1 0
+0 5 0 0 9 0 0 3 0
+0 1 9 0 6 0 0 4 0
+3 0 0 4 0 0 7 0 0
+5 7 0 1 0 0 2 0 0
+9 2 8 0 0 0 0 6 0
 ```
 ## Output File Format
 
@@ -53,11 +49,32 @@ The output file logs the solving steps and the final Sudoku grid.
 ### Example output (output.txt):
 ```
 ------------------
-Step 1 - 4 @ R1C3
+Step 1 - 8 @ R1C1
 ------------------
-5 3 4 0 7 0 0 0 0
-6 0 0 1 9 5 0 0 0
-...
+8 4 0 0 0 0 1 7 9
+0 0 2 0 0 8 0 5 4
+0 0 6 0 0 5 0 0 8
+0 8 0 0 7 0 9 1 0
+0 5 0 0 9 0 0 3 0
+0 1 9 0 6 0 0 4 0
+3 0 0 4 0 0 7 0 0
+5 7 0 1 0 0 2 0 0
+9 2 8 0 0 0 0 6 0
+------------------
+. 
+.
+.
+Step 48 - 1 @ R9C9
+------------------
+8 4 5 6 3 2 1 7 9
+7 3 2 9 1 8 6 5 4
+1 9 6 7 4 5 3 2 8
+6 8 3 5 7 4 9 1 2
+4 5 7 2 9 1 8 3 6
+2 1 9 8 6 3 5 4 7
+3 6 1 4 2 9 7 8 5
+5 7 4 1 8 6 2 9 3
+9 2 8 3 5 7 4 6 1
 ------------------
 ```
 ## How It Works
@@ -68,13 +85,13 @@ Step 1 - 4 @ R1C3
 
 3. Determines possible numbers for each empty cell using:
 
-- Row constraints
+   - Row constraints
 
-- Column constraints
+   - Column constraints
 
-- 3x3 subgrid constraints
+   - 3x3 subgrid constraints
 
-- If a cell has only one valid possibility, fills it in and records the step.
+   - If a cell has only one valid possibility, fills it in and records the step.
 
 4. Repeats the process until the puzzle is solved.
 
@@ -83,4 +100,6 @@ Step 1 - 4 @ R1C3
 ## License
 
 This project is open-source and available under the MIT License.
+
+bariscelikw
 
