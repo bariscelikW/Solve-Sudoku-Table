@@ -1,4 +1,4 @@
-# Solve Sudoku Table
+Sudoku Solver
 
 Overview
 
@@ -79,3 +79,8 @@ If a cell has only one valid possibility, fills it in and records the step.
 Repeats the process until the puzzle is solved.
 
 Writes the solution and step-by-step solving process to the output file.
+
+License
+
+This project is open-source and available under the MIT License.
+
